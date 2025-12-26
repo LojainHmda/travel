@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Calendar, Users, Globe, Building2, User, FileText, Hash } from 'lucide-react';
 import { InboundRequest, CustomerType, PricingMode, WorkflowStage } from '../types';
@@ -56,14 +57,14 @@ const RequestHeader: React.FC<RequestHeaderProps> = ({ data, onChange, onWorkflo
                 type="date" 
                 value={data.startDate}
                 onChange={(e) => onChange({ startDate: e.target.value })}
-                className="w-full p-2 border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full p-2 bg-white border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
               />
               <span className="text-slate-400">→</span>
               <input 
                 type="date" 
                 value={data.endDate}
                 onChange={(e) => onChange({ endDate: e.target.value })}
-                className="w-full p-2 border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full p-2 bg-white border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
               />
             </div>
           </div>
@@ -90,7 +91,7 @@ const RequestHeader: React.FC<RequestHeaderProps> = ({ data, onChange, onWorkflo
               type="text" 
               value={data.contactName}
               onChange={(e) => onChange({ contactName: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full p-2 bg-white border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
               placeholder="Primary Contact"
             />
           </div>
@@ -102,7 +103,7 @@ const RequestHeader: React.FC<RequestHeaderProps> = ({ data, onChange, onWorkflo
               type="text" 
               value={data.agentReference}
               onChange={(e) => onChange({ agentReference: e.target.value })}
-              className="w-full p-2 border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full p-2 bg-white border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
               placeholder="Ext. Ref No."
             />
           </div>
@@ -117,7 +118,7 @@ const RequestHeader: React.FC<RequestHeaderProps> = ({ data, onChange, onWorkflo
               type="number" 
               value={data.paxCount}
               onChange={(e) => onChange({ paxCount: parseInt(e.target.value) || 0 })}
-              className="w-full p-2 border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              className="w-full p-2 bg-white border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
           <div>
@@ -158,7 +159,7 @@ const RequestHeader: React.FC<RequestHeaderProps> = ({ data, onChange, onWorkflo
           <textarea 
             value={data.specialNotes}
             onChange={(e) => onChange({ specialNotes: e.target.value })}
-            className="w-full h-[40px] p-2 border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none resize-none"
+            className="w-full h-[40px] p-2 bg-white border border-slate-300 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none resize-none"
             placeholder="Special requirements..."
           />
         </div>
